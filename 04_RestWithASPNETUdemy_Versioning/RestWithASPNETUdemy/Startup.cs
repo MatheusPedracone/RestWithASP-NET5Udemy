@@ -30,7 +30,7 @@ namespace RestWithASPNETUdemy
             
             services.AddDbContextPool<MySQLContext>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
 
-            
+            services.AddApiVersioning();
             
             services.AddScoped<IPersonService, PersonServiceImplementation>();
 
